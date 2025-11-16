@@ -96,6 +96,7 @@ const Plans = () => {
             </div>
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold mb-2">Стандарт</h3>
+              <p className="text-sm text-muted-foreground">Основен вариант</p>
             </div>
             <div className="flex items-start gap-3 mb-6">
               
