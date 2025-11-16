@@ -19,7 +19,7 @@ const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                Бърза, устойчива, енергийно ефективна къща за{" "}
+                Бърза, устойчива и енергийно ефективна къща за{" "}
                 <span className="text-primary">месеци</span>, не за години.
               </h1>
               <p className="text-lg lg:text-xl text-muted-foreground">
