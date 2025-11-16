@@ -11,11 +11,6 @@ const Plans = () => {
     subtitle: "Висок клас",
     features: ["Площ: 140-180м²", "4 спални, 3 бани", "Премиум изолация", "Луксозни довършителни работи", "Алуминиева дограма - топ качество", "Премиум входна врата", "Керемиден покрив с хидроизолация", "Пълни инсталации + климатизация", "Гараж за 2 коли", "Довършена тераса/веранда"],
     highlight: false
-  }, {
-    name: "ВИП",
-    subtitle: "Индивидуален проект",
-    features: ["Площ: по желание", "Брой стаи: по проект", "Максимална изолация", "Ексклузивни материали", "Индивидуален дизайн", "Smart home система", "Енергия от възобновяеми източници", "Озеленяване и ландшафт", "Басейн (опция)", "Пълно проектно управление"],
-    highlight: false
   }];
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
@@ -165,13 +160,6 @@ const Plans = () => {
                     <span className="text-sm leading-relaxed">{feature}</span>
                   </div>)}
               </div>
-
-              {index === 2 && (
-                <Button variant="default" size="default" className="w-full gap-2 mb-3" onClick={() => window.open('/specifications-vip.html', '_blank')}>
-                  <Download size={18} />
-                  Изтегли спецификации
-                </Button>
-              )}
 
               <Button variant={plan.highlight ? "default" : "outline"} className="w-full" onClick={scrollToContact}>
                 Изпрати запитване
