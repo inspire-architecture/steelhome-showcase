@@ -1,4 +1,4 @@
-import { Check, Download, FileText } from "lucide-react";
+import { Check, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Plans = () => {
   const plans = [{
@@ -42,9 +42,7 @@ const Plans = () => {
               <h3 className="text-2xl font-bold mb-2">Икономик</h3>
             </div>
             <div className="flex items-start gap-3 mb-6">
-              <div className="p-2 bg-primary/10 rounded-lg">
-                <FileText className="w-6 h-6 text-primary" />
-              </div>
+              
               <div>
                 <h4 className="text-lg font-bold mb-1">Технически спецификации</h4>
                 <p className="text-sm text-muted-foreground">
@@ -99,12 +97,10 @@ const Plans = () => {
               <h3 className="text-2xl font-bold mb-2">План Стандарт</h3>
             </div>
             <div className="flex items-start gap-3 mb-6">
-              <div className="p-2 bg-primary/10 rounded-lg">
-                <FileText className="w-6 h-6 text-primary" />
-              </div>
+              
               <div>
-                <h4 className="text-lg font-bold mb-1">Технически спецификации</h4>
-                <p className="text-sm text-muted-foreground">Пълна информация за материали и конструкция</p>
+                
+                
               </div>
             </div>
 
