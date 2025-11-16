@@ -1,69 +1,31 @@
 import { Check, Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Plans = () => {
-  const plans = [
-    {
-      name: "СТАНДАРТ",
-      subtitle: "Най-популярен",
-      features: [
-        "Площ: 100-120м²",
-        "3 спални, 2 бани",
-        "Подобрена изолация",
-        "Качествени довършителни работи",
-        "Алуминиева дограма",
-        "Блиндирана врата",
-        "Керемиден покрив",
-        "Пълни ел., ВиК и отоплителни инсталации",
-        "Изграден гараж",
-      ],
-      highlight: true
-    },
-    {
-      name: "ПРЕМИУМ",
-      subtitle: "Висок клас",
-      features: [
-        "Площ: 140-180м²",
-        "4 спални, 3 бани",
-        "Премиум изолация",
-        "Луксозни довършителни работи",
-        "Алуминиева дограма - топ качество",
-        "Премиум входна врата",
-        "Керемиден покрив с хидроизолация",
-        "Пълни инсталации + климатизация",
-        "Гараж за 2 коли",
-        "Довършена тераса/веранда",
-      ],
-      highlight: false
-    },
-    {
-      name: "ВИП",
-      subtitle: "Индивидуален проект",
-      features: [
-        "Площ: по желание",
-        "Брой стаи: по проект",
-        "Максимална изолация",
-        "Ексклузивни материали",
-        "Индивидуален дизайн",
-        "Smart home система",
-        "Енергия от възобновяеми източници",
-        "Озеленяване и ландшафт",
-        "Басейн (опция)",
-        "Пълно проектно управление",
-      ],
-      highlight: false
-    },
-  ];
-
+  const plans = [{
+    name: "СТАНДАРТ",
+    subtitle: "Най-популярен",
+    features: ["Площ: 100-120м²", "3 спални, 2 бани", "Подобрена изолация", "Качествени довършителни работи", "Алуминиева дограма", "Блиндирана врата", "Керемиден покрив", "Пълни ел., ВиК и отоплителни инсталации", "Изграден гараж"],
+    highlight: true
+  }, {
+    name: "ПРЕМИУМ",
+    subtitle: "Висок клас",
+    features: ["Площ: 140-180м²", "4 спални, 3 бани", "Премиум изолация", "Луксозни довършителни работи", "Алуминиева дограма - топ качество", "Премиум входна врата", "Керемиден покрив с хидроизолация", "Пълни инсталации + климатизация", "Гараж за 2 коли", "Довършена тераса/веранда"],
+    highlight: false
+  }, {
+    name: "ВИП",
+    subtitle: "Индивидуален проект",
+    features: ["Площ: по желание", "Брой стаи: по проект", "Максимална изолация", "Ексклузивни материали", "Индивидуален дизайн", "Smart home система", "Енергия от възобновяеми източници", "Озеленяване и ландшафт", "Басейн (опция)", "Пълно проектно управление"],
+    highlight: false
+  }];
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section id="plans" className="py-20 lg:py-32 bg-card/30">
+  return <section id="plans" className="py-20 lg:py-32 bg-card/30">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Избери план</h2>
@@ -85,7 +47,8 @@ const Plans = () => {
               </div>
               <div>
                 <h4 className="text-lg font-bold mb-1">Технически спецификации</h4>
-                <p className="text-sm text-muted-foreground">Пълна информация за материали и конструкция</p>
+                <p className="text-sm text-muted-foreground">
+              </p>
               </div>
             </div>
 
@@ -124,12 +87,7 @@ const Plans = () => {
               </div>
             </div>
 
-            <Button 
-              variant="default" 
-              size="default"
-              className="w-full gap-2"
-              onClick={() => window.open('/specifications.html', '_blank')}
-            >
+            <Button variant="default" size="default" className="w-full gap-2" onClick={() => window.open('/specifications.html', '_blank')}>
               <Download size={18} />
               Изтегли спецификации
             </Button>
@@ -188,12 +146,7 @@ const Plans = () => {
               </div>
             </div>
 
-            <Button 
-              variant="default" 
-              size="default"
-              className="w-full gap-2"
-              onClick={() => window.open('/specifications-standard.html', '_blank')}
-            >
+            <Button variant="default" size="default" className="w-full gap-2" onClick={() => window.open('/specifications-standard.html', '_blank')}>
               <Download size={18} />
               Изтегли спецификации
             </Button>
@@ -201,20 +154,10 @@ const Plans = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-          {plans.map((plan, index) => (
-            <div
-              key={index}
-              className={`relative p-6 rounded-xl transition-all ${
-                plan.highlight
-                  ? "bg-primary/10 border-2 border-primary shadow-2xl scale-105"
-                  : "bg-card border border-border hover:border-primary/50 hover:shadow-xl"
-              }`}
-            >
-              {plan.highlight && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+          {plans.map((plan, index) => <div key={index} className={`relative p-6 rounded-xl transition-all ${plan.highlight ? "bg-primary/10 border-2 border-primary shadow-2xl scale-105" : "bg-card border border-border hover:border-primary/50 hover:shadow-xl"}`}>
+              {plan.highlight && <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
                   Препоръчан
-                </div>
-              )}
+                </div>}
               
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
@@ -222,27 +165,18 @@ const Plans = () => {
               </div>
 
               <div className="space-y-3 mb-6">
-                {plan.features.map((feature, i) => (
-                  <div key={i} className="flex items-start gap-2">
+                {plan.features.map((feature, i) => <div key={i} className="flex items-start gap-2">
                     <Check size={18} className={`flex-shrink-0 mt-0.5 ${plan.highlight ? 'text-primary' : 'text-muted-foreground'}`} />
                     <span className="text-sm leading-relaxed">{feature}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
 
-              <Button 
-                variant={plan.highlight ? "default" : "outline"} 
-                className="w-full"
-                onClick={scrollToContact}
-              >
+              <Button variant={plan.highlight ? "default" : "outline"} className="w-full" onClick={scrollToContact}>
                 Изпрати запитване
               </Button>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Plans;
