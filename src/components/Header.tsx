@@ -43,7 +43,7 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center">
-            <img src="/prefabrik-house.svg" alt="Prefabrik House" className="h-10 lg:h-12" />
+            <img src="/prefabrik-house-logo.png" alt="Prefabrik House" className="h-10 lg:h-12" />
           </div>
 
           {/* Desktop Navigation */}
