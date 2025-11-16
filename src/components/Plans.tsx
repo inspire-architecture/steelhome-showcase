@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Plans = () => {
@@ -85,6 +85,70 @@ const Plans = () => {
           <p className="text-lg text-muted-foreground">
             Изберете пакет, който отговаря на вашите нужди и бюджет
           </p>
+        </div>
+
+        {/* Technical Specifications Card */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="bg-card border-2 border-primary/20 rounded-xl p-8 shadow-xl">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="p-3 bg-primary/10 rounded-lg">
+                <FileText className="w-8 h-8 text-primary" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold mb-2">Технически спецификации</h3>
+                <p className="text-muted-foreground">Пълна информация за материали, конструкция и етапи на изграждане</p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <Check size={18} className="text-primary flex-shrink-0" />
+                  <span className="text-sm">Пълен проект с всички части</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check size={18} className="text-primary flex-shrink-0" />
+                  <span className="text-sm">Метална поцинкована конструкция</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check size={18} className="text-primary flex-shrink-0" />
+                  <span className="text-sm">Външни стени 330мм с изолация</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check size={18} className="text-primary flex-shrink-0" />
+                  <span className="text-sm">Покрив с мълниезащита</span>
+                </div>
+              </div>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <Check size={18} className="text-primary flex-shrink-0" />
+                  <span className="text-sm">ПВЦ/Алуминиева дограма</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check size={18} className="text-primary flex-shrink-0" />
+                  <span className="text-sm">Пълни ел., ВиК и канализация</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check size={18} className="text-primary flex-shrink-0" />
+                  <span className="text-sm">5 етапа на плащане</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check size={18} className="text-primary flex-shrink-0" />
+                  <span className="text-sm">Включен фундамент до 30км от София</span>
+                </div>
+              </div>
+            </div>
+
+            <Button 
+              variant="default" 
+              size="lg"
+              className="w-full md:w-auto gap-2"
+              onClick={() => window.open('/specifications.html', '_blank')}
+            >
+              <Download size={20} />
+              Изтегли пълните спецификации
+            </Button>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
