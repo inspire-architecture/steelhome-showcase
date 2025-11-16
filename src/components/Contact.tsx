@@ -208,7 +208,7 @@ const Contact = () => {
                 <div>
                   <div className="font-medium mb-1">Адрес</div>
                   <p className="text-muted-foreground">
-                    гр. София, ул. Асен Йорданов 12
+                    гр. София, ул. Асен Йорданов 12                     
 гр. Пловдив, бул. ХХХХ        
 
 
