@@ -77,7 +77,7 @@ const Plans = () => {
           {/* Plan Optimik */}
           <div className="bg-card border-2 border-primary/20 rounded-xl p-6 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold mb-2">План Оптимик</h3>
+              <h3 className="text-2xl font-bold mb-2">Икономик</h3>
             </div>
             <div className="flex items-start gap-3 mb-6">
               <div className="p-2 bg-primary/10 rounded-lg">
