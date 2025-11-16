@@ -81,10 +81,7 @@ const Plans = () => {
                 <Check size={16} className="text-primary flex-shrink-0" />
                 <span className="text-sm">5 етапа на плащане</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Check size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">Включен фундамент до 30км от София</span>
-              </div>
+              
             </div>
 
             <Button variant="default" size="default" className="w-full gap-2" onClick={() => window.open('/specifications.html', '_blank')}>
