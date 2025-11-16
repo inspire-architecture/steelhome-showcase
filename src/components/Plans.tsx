@@ -161,16 +161,16 @@ const Plans = () => {
                   </div>)}
               </div>
 
-              {index === 0 && (
-                <Button variant="default" size="default" className="w-full gap-2 mb-3" onClick={() => window.open('/specifications-vip-premium.html', '_blank')}>
+              {index === 0 ? (
+                <Button variant="default" size="default" className="w-full gap-2" onClick={() => window.open('/specifications-vip-premium.html', '_blank')}>
                   <Download size={18} />
                   Изтегли спецификации
                 </Button>
+              ) : (
+                <Button variant={plan.highlight ? "default" : "outline"} className="w-full" onClick={scrollToContact}>
+                  Изпрати запитване
+                </Button>
               )}
-
-              <Button variant={plan.highlight ? "default" : "outline"} className="w-full" onClick={scrollToContact}>
-                Изпрати запитване
-              </Button>
             </div>)}
         </div>
       </div>
