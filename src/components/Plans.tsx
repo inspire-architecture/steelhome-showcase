@@ -90,12 +90,15 @@ const Plans = () => {
         {/* Technical Specifications Card */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-card border-2 border-primary/20 rounded-xl p-8 shadow-xl">
+            <div className="text-center mb-6">
+              <h3 className="text-3xl font-bold mb-2">План Оптимик</h3>
+            </div>
             <div className="flex items-start gap-4 mb-6">
               <div className="p-3 bg-primary/10 rounded-lg">
                 <FileText className="w-8 h-8 text-primary" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-2">Технически спецификации</h3>
+                <h4 className="text-xl font-bold mb-2">Технически спецификации</h4>
                 <p className="text-muted-foreground">Пълна информация за материали, конструкция и етапи на изграждане</p>
               </div>
             </div>
