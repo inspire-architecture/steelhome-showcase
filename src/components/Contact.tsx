@@ -5,19 +5,16 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { Phone, Mail, MapPin } from "lucide-react";
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     message: "",
-    gdpr: false,
+    gdpr: false
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
     if (!formData.gdpr) {
       toast.error("Моля, приемете условията за обработка на лични данни");
       return;
@@ -25,19 +22,17 @@ const Contact = () => {
 
     // Here you would typically send the form data to your backend
     toast.success("Вашето запитване е изпратено успешно! Ще се свържем с вас скоро.");
-    
+
     // Reset form
     setFormData({
       name: "",
       phone: "",
       email: "",
       message: "",
-      gdpr: false,
+      gdpr: false
     });
   };
-
-  return (
-    <section id="contact" className="py-20 lg:py-32">
+  return <section id="contact" className="py-20 lg:py-32">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Контакти</h2>
@@ -55,62 +50,47 @@ const Contact = () => {
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Име *
                 </label>
-                <Input
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  required
-                  placeholder="Вашето име"
-                />
+                <Input id="name" value={formData.name} onChange={e => setFormData({
+                ...formData,
+                name: e.target.value
+              })} required placeholder="Вашето име" />
               </div>
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium mb-2">
                   Телефон *
                 </label>
-                <Input
-                  id="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  required
-                  placeholder="+359 ..."
-                />
+                <Input id="phone" type="tel" value={formData.phone} onChange={e => setFormData({
+                ...formData,
+                phone: e.target.value
+              })} required placeholder="+359 ..." />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium mb-2">
                   Имейл *
                 </label>
-                <Input
-                  id="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  required
-                  placeholder="example@email.com"
-                />
+                <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
+                ...formData,
+                email: e.target.value
+              })} required placeholder="example@email.com" />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
                   Съобщение
                 </label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Опишете вашия проект..."
-                  rows={5}
-                />
+                <Textarea id="message" value={formData.message} onChange={e => setFormData({
+                ...formData,
+                message: e.target.value
+              })} placeholder="Опишете вашия проект..." rows={5} />
               </div>
 
               <div className="flex items-start gap-2">
-                <Checkbox
-                  id="gdpr"
-                  checked={formData.gdpr}
-                  onCheckedChange={(checked) => setFormData({ ...formData, gdpr: checked as boolean })}
-                />
+                <Checkbox id="gdpr" checked={formData.gdpr} onCheckedChange={checked => setFormData({
+                ...formData,
+                gdpr: checked as boolean
+              })} />
                 <label htmlFor="gdpr" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
                   Съгласен съм моите лични данни да бъдат обработени съгласно GDPR *
                 </label>
@@ -135,6 +115,76 @@ const Contact = () => {
                   <div className="font-medium mb-1">Телефон</div>
                   <a href="tel:+359888123456" className="text-muted-foreground hover:text-primary transition-colors">
                     +359 888 123 456
++359 894 93 84 84
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   </a>
                 </div>
               </div>
@@ -185,8 +235,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
