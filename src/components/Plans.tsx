@@ -148,43 +148,43 @@ const Plans = () => {
                 <FileText className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h4 className="text-lg font-bold mb-1">Разширени спецификации</h4>
-                <p className="text-sm text-muted-foreground">Подобрени материали и довършителни работи</p>
+                <h4 className="text-lg font-bold mb-1">Технически спецификации</h4>
+                <p className="text-sm text-muted-foreground">Пълна информация за материали и конструкция</p>
               </div>
             </div>
 
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2">
                 <Check size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">Всички от План Оптимик +</span>
+                <span className="text-sm">Пълен проект с всички части</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">Площ: 100-120м²</span>
+                <span className="text-sm">Метална поцинкована конструкция</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">3 спални, 2 бани</span>
+                <span className="text-sm">Външни стени 330мм с изолация</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">Подобрена изолация</span>
+                <span className="text-sm">Покрив с мълниезащита</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">Керемиден покрив</span>
+                <span className="text-sm">ПВЦ/Алуминиева дограма</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">Блиндирана входна врата</span>
+                <span className="text-sm">Пълни ел., ВиК и канализация</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">Пълни инсталации + отопление</span>
+                <span className="text-sm">5 етапа на плащане</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={16} className="text-primary flex-shrink-0" />
-                <span className="text-sm">Изграден гараж</span>
+                <span className="text-sm">Включен фундамент до 30км от София</span>
               </div>
             </div>
 
@@ -192,9 +192,10 @@ const Plans = () => {
               variant="default" 
               size="default"
               className="w-full gap-2"
-              onClick={scrollToContact}
+              onClick={() => window.open('/specifications-standard.html', '_blank')}
             >
-              Изпрати запитване
+              <Download size={18} />
+              Изтегли спецификации
             </Button>
           </div>
         </div>
