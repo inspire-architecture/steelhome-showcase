@@ -2,7 +2,7 @@ import { Check, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 const Plans = () => {
   const plans = [{
-    name: "ПРЕМИУМ",
+    name: "Премиум",
     subtitle: "Най-популярен",
     features: ["Площ: 100-120м²", "3 спални, 2 бани", "Подобрена изолация", "Качествени довършителни работи", "Алуминиева дограма", "Блиндирана врата", "Керемиден покрив", "Пълни ел., ВиК и отоплителни инсталации", "Изграден гараж"],
     highlight: true
