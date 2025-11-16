@@ -72,74 +72,134 @@ const Plans = () => {
           </p>
         </div>
 
-        {/* Technical Specifications Card */}
-        <div className="max-w-4xl mx-auto mb-16">
-          <div className="bg-card border-2 border-primary/20 rounded-xl p-8 shadow-xl">
+        {/* Technical Specifications Cards */}
+        <div className="grid md:grid-cols-2 gap-6 max-w-7xl mx-auto mb-16">
+          {/* Plan Optimik */}
+          <div className="bg-card border-2 border-primary/20 rounded-xl p-6 shadow-xl">
             <div className="text-center mb-6">
-              <h3 className="text-3xl font-bold mb-2">План Оптимик</h3>
+              <h3 className="text-2xl font-bold mb-2">План Оптимик</h3>
             </div>
-            <div className="flex items-start gap-4 mb-6">
-              <div className="p-3 bg-primary/10 rounded-lg">
-                <FileText className="w-8 h-8 text-primary" />
+            <div className="flex items-start gap-3 mb-6">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <FileText className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h4 className="text-xl font-bold mb-2">Технически спецификации</h4>
-                <p className="text-muted-foreground">Пълна информация за материали, конструкция и етапи на изграждане</p>
+                <h4 className="text-lg font-bold mb-1">Технически спецификации</h4>
+                <p className="text-sm text-muted-foreground">Пълна информация за материали и конструкция</p>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-6">
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Check size={18} className="text-primary flex-shrink-0" />
-                  <span className="text-sm">Пълен проект с всички части</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check size={18} className="text-primary flex-shrink-0" />
-                  <span className="text-sm">Метална поцинкована конструкция</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check size={18} className="text-primary flex-shrink-0" />
-                  <span className="text-sm">Външни стени 330мм с изолация</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check size={18} className="text-primary flex-shrink-0" />
-                  <span className="text-sm">Покрив с мълниезащита</span>
-                </div>
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Пълен проект с всички части</span>
               </div>
-              <div className="space-y-2">
-                <div className="flex items-center gap-2">
-                  <Check size={18} className="text-primary flex-shrink-0" />
-                  <span className="text-sm">ПВЦ/Алуминиева дограма</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check size={18} className="text-primary flex-shrink-0" />
-                  <span className="text-sm">Пълни ел., ВиК и канализация</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check size={18} className="text-primary flex-shrink-0" />
-                  <span className="text-sm">5 етапа на плащане</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Check size={18} className="text-primary flex-shrink-0" />
-                  <span className="text-sm">Включен фундамент до 30км от София</span>
-                </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Метална поцинкована конструкция</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Външни стени 330мм с изолация</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Покрив с мълниезащита</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">ПВЦ/Алуминиева дограма</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Пълни ел., ВиК и канализация</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">5 етапа на плащане</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Включен фундамент до 30км от София</span>
               </div>
             </div>
 
             <Button 
               variant="default" 
-              size="lg"
-              className="w-full md:w-auto gap-2"
+              size="default"
+              className="w-full gap-2"
               onClick={() => window.open('/specifications.html', '_blank')}
             >
-              <Download size={20} />
-              Изтегли пълните спецификации
+              <Download size={18} />
+              Изтегли спецификации
+            </Button>
+          </div>
+
+          {/* Plan Standard */}
+          <div className="bg-card border-2 border-primary rounded-xl p-6 shadow-xl relative">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
+              Препоръчан
+            </div>
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold mb-2">План Стандарт</h3>
+            </div>
+            <div className="flex items-start gap-3 mb-6">
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <FileText className="w-6 h-6 text-primary" />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold mb-1">Разширени спецификации</h4>
+                <p className="text-sm text-muted-foreground">Подобрени материали и довършителни работи</p>
+              </div>
+            </div>
+
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Всички от План Оптимик +</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Подобрена изолация и материали</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Керемиден покрив</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Блиндирана входна врата</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Отоплителни инсталации</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Изграден гараж</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Качествени довършителни работи</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={16} className="text-primary flex-shrink-0" />
+                <span className="text-sm">Площ: 100-120м²</span>
+              </div>
+            </div>
+
+            <Button 
+              variant="default" 
+              size="default"
+              className="w-full gap-2"
+              onClick={scrollToContact}
+            >
+              Изпрати запитване
             </Button>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
             <div
               key={index}
