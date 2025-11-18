@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Контакти</h3>
+            <h3 className="font-semibold mb-4">+359 885 6391 36    </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>+359 888 123 456</li>
               <li>info@prefabrik-house.bg</li>
