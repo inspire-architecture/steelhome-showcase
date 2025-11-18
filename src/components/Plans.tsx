@@ -124,39 +124,35 @@ const Plans = () => {
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Първи етаж: циментова замазка до 5 см, XPS 5 см</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Външни стени 330мм: латекс, гипсокартон 25мм, фасадна силиконова мазилка</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Вътрешни стени 139мм: латекс, гипсокартон 25мм</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Таван: латекс, окачен гипсокартон 12.5мм, минерална вата 25см</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Покрив до 20° със стрехи до 70см</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Мокри помещения: влагоустойчив гипсокартон, хидроизолация</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Алуминиева дограма с троен стъклопакет</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Блиндирана входна врата, МДФ интериорни врати</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
                 <span className="text-xs">Включен бетонов фундамент</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Външна топлоизолация EPS – 15 см</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Стандартна облицовка на стените – 2 пласта гипсокартон</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Топлоизолация в стени и тавани 10 см</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Циментова замазка по пода + топлоизолация</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">ПВЦ или алуминиева дограма със двоен стъклопакет</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Покривно покритие от битумни или метални или керамични керемиди</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Входна блиндирана врата</span>
               </div>
             </div>
 
