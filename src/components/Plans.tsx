@@ -15,7 +15,7 @@ const Plans = () => {
       "Входна блиндирана врата",
       "Вътрешни МДФ интериорни врати"
     ],
-    highlight: false
+    highlight: true
   }, {
     name: "Вип",
     subtitle: "Най-популярен",
@@ -31,7 +31,7 @@ const Plans = () => {
       "Вътрешни МДФ интериорни врати",
       "Пълно обзавеждане с мебели по поръчка"
     ],
-    highlight: true
+    highlight: false
   }];
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
@@ -171,7 +171,7 @@ const Plans = () => {
             >
               {plan.highlight && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
-                  Най-изгоден
+                  Препоръчан
                 </div>
               )}
               
