@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, TrendingUp, Award, Clock } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/hero-house.jpg";
+import construction1 from "@/assets/construction-1.jpg";
+import construction2 from "@/assets/construction-2.webp";
+import construction3 from "@/assets/construction-3.jpg";
+import construction4 from "@/assets/construction-4.png";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -67,21 +73,42 @@ const Hero = () => {
           </div>
 
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img src={heroImage} alt="Modern Prefab House" className="w-full h-auto" />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-              
-              {/* Info tags */}
-              <div className="absolute top-4 left-4 bg-card/90 backdrop-blur-sm border border-border rounded-lg px-4 py-2">
-                <div className="text-xs text-muted-foreground">Модел</div>
-                <div className="font-semibold">Премиум 120м²</div>
-              </div>
-              
-              <div className="absolute bottom-4 right-4 bg-card/90 backdrop-blur-sm border border-border rounded-lg px-4 py-2">
-                <div className="text-xs text-muted-foreground">Срок</div>
-                <div className="font-semibold text-primary">4-6 месеца</div>
-              </div>
-            </div>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 4000,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[heroImage, construction1, construction2, construction3, construction4].map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                      <img src={image} alt={`Префабрикирана къща ${index + 1}`} className="w-full h-auto" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                      
+                      {/* Info tags */}
+                      <div className="absolute top-4 left-4 bg-card/90 backdrop-blur-sm border border-border rounded-lg px-4 py-2">
+                        <div className="text-xs text-muted-foreground">Модел</div>
+                        <div className="font-semibold">Премиум 120м²</div>
+                      </div>
+                      
+                      <div className="absolute bottom-4 right-4 bg-card/90 backdrop-blur-sm border border-border rounded-lg px-4 py-2">
+                        <div className="text-xs text-muted-foreground">Срок</div>
+                        <div className="font-semibold text-primary">4-6 месеца</div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
         </div>
       </div>
