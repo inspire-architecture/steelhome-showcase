@@ -116,15 +116,15 @@ const Plans = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Външни стени 330мм: гипсокартон 25мм, топлоизолация 15см, силикатна мазилка</span>
+                <span className="text-xs">Външни стени 330мм: латекс, гипсокартон 25мм, фасадна силиконова мазилка</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Вътрешни стени 139мм: гипсокартон 25мм</span>
+                <span className="text-xs">Вътрешни стени 139мм: латекс, гипсокартон 25мм</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Таван: стъклена минерална вата 10см</span>
+                <span className="text-xs">Таван: латекс, окачен гипсокартон 12.5мм, минерална вата 25см</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
@@ -132,15 +132,15 @@ const Plans = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Битумни, метални или керамични керемиди</span>
+                <span className="text-xs">Мокри помещения: влагоустойчив гипсокартон, хидроизолация</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Мокри помещения: влагоустойчив гипсокартон</span>
+                <span className="text-xs">Алуминиева дограма с троен стъклопакет</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">ПВЦ или алуминиева дограма с двоен стъклопакет</span>
+                <span className="text-xs">Блиндирана входна врата, МДФ интериорни врати</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
