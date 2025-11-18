@@ -112,35 +112,39 @@ const Plans = () => {
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Пълен проект с всички части</span>
+                <span className="text-xs">Първи етаж: циментова замазка до 5 см, XPS 5 см</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Метална поцинкована конструкция</span>
+                <span className="text-xs">Външни стени 330мм: гипсокартон 25мм, топлоизолация 15см, силикатна мазилка</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Външни стени 330мм с изолация</span>
+                <span className="text-xs">Вътрешни стени 139мм: гипсокартон 25мм</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Покрив с мълниезащита</span>
+                <span className="text-xs">Таван: стъклена минерална вата 10см</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">ПВЦ/Алуминиева дограма</span>
+                <span className="text-xs">Покрив до 20° със стрехи до 70см</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Пълни ел., ВиК и канализация</span>
+                <span className="text-xs">Битумни, метални или керамични керемиди</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">5 етапа на плащане</span>
+                <span className="text-xs">Мокри помещения: влагоустойчив гипсокартон</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Включен фундамент до 30км от София</span>
+                <span className="text-xs">ПВЦ или алуминиева дограма с двоен стъклопакет</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Включен бетонов фундамент</span>
               </div>
             </div>
 
