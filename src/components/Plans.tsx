@@ -70,41 +70,32 @@ const Plans = () => {
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Първи етаж: циментова замазка до 5 см, XPS 5 см</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Външни стени 330мм: латекс, гипсокартон 25мм, фасадна силиконова мазилка</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Вътрешни стени 139мм: латекс, гипсокартон 25мм</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Таван: латекс, окачен гипсокартон 12.5мм, минерална вата 25см</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Покрив до 20° със стрехи до 70см</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Мокри помещения: влагоустойчив гипсокартон, хидроизолация</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Алуминиева дограма с троен стъклопакет</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
-                <span className="text-xs">Блиндирана входна врата, МДФ интериорни врати</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Check size={14} className="text-primary flex-shrink-0" />
                 <span className="text-xs">Включен бетонов фундамент</span>
               </div>
-              
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Базова външна топлоизолация – 10 см</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Базова облицовка на стените – 1 пласт гипсокартон</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Циментова замазка по пода</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">ПВЦ дограма със двоен стъклопакет</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Покривно покритие от битумни или метални керемиди</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={14} className="text-primary flex-shrink-0" />
+                <span className="text-xs">Входна метална врата</span>
+              </div>
             </div>
 
             <Button variant="default" size="sm" className="w-full gap-2" onClick={() => window.open('/specifications.html', '_blank')}>
