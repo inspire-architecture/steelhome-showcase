@@ -54,20 +54,21 @@ const Technology = () => {
           {technologies.map((tech, index) => (
             <div
               key={index}
-              className="group p-6 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-xl transition-all"
+              className="group p-6 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-xl transition-all duration-500 animate-fade-in hover:-translate-y-2 hover:scale-105"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
+                <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:scale-125 group-hover:rotate-6 transition-all duration-300">
                   <tech.icon size={28} />
                 </div>
                 <div className="flex-1">
-                  <div className="text-xs font-medium text-primary mb-2 uppercase tracking-wide">
+                  <div className="text-xs font-medium text-primary mb-2 uppercase tracking-wide group-hover:tracking-wider transition-all">
                     {tech.tag}
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{tech.title}</h3>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">{tech.title}</h3>
                 </div>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed group-hover:text-foreground transition-colors">
                 {tech.description}
               </p>
             </div>
