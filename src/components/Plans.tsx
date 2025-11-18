@@ -15,7 +15,8 @@ const Plans = () => {
       "Входна блиндирана врата",
       "Вътрешни МДФ интериорни врати"
     ],
-    highlight: true
+    highlight: true,
+    badge: "Препоръчан"
   }, {
     name: "Вип",
     subtitle: "Най-популярен",
@@ -31,7 +32,8 @@ const Plans = () => {
       "Вътрешни МДФ интериорни врати",
       "Пълно обзавеждане с мебели по поръчка"
     ],
-    highlight: false
+    highlight: false,
+    badge: "Най-изгоден"
   }];
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
@@ -169,9 +171,9 @@ const Plans = () => {
               className={`relative p-4 rounded-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in ${plan.highlight ? "bg-primary/10 border-2 border-primary shadow-2xl" : "bg-card border border-border hover:border-primary/50 hover:shadow-xl"}`}
               style={{ animationDelay: `${(index + 2) * 150}ms` }}
             >
-              {plan.highlight && (
+              {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
-                  Препоръчан
+                  {plan.badge}
                 </div>
               )}
               
