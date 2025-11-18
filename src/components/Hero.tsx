@@ -91,17 +91,6 @@ const Hero = () => {
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
                       <img src={image} alt={`Префабрикирана къща ${index + 1}`} className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-                      
-                      {/* Info tags */}
-                      <div className="absolute top-4 left-4 bg-card/90 backdrop-blur-sm border border-border rounded-lg px-4 py-2">
-                        <div className="text-xs text-muted-foreground">Модел</div>
-                        <div className="font-semibold">Премиум 120м²</div>
-                      </div>
-                      
-                      <div className="absolute bottom-4 right-4 bg-card/90 backdrop-blur-sm border border-border rounded-lg px-4 py-2">
-                        <div className="text-xs text-muted-foreground">Срок</div>
-                        <div className="font-semibold text-primary">4-6 месеца</div>
-                      </div>
                     </div>
                   </CarouselItem>
                 ))}
