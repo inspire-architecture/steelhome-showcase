@@ -30,7 +30,7 @@ const Plans = () => {
         </div>
 
         {/* Technical Specifications Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {/* Plan Optimik */}
           <div className="bg-card border-2 border-primary/20 rounded-xl p-4 shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-fade-in">
             <div className="text-center mb-4">
