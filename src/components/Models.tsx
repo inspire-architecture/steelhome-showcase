@@ -1,8 +1,18 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import modelEconomic from "@/assets/model-economic.png";
+import modelEconomic2 from "@/assets/model-economic-2.png";
+import modelEconomic3 from "@/assets/model-economic-3.png";
 import modelStandard from "@/assets/model-standard.jpg";
 import modelPremium from "@/assets/model-premium.jpg";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Models = () => {
   const models = [
@@ -11,7 +21,7 @@ const Models = () => {
       area: "60-80м²",
       description: "Компактна еднофамилна къща с оптимално разпределение на пространството. Идеална за малки семейства или ваканционни имоти.",
       features: ["2 спални", "1 баня", "Отворена кухня", "Тераса"],
-      image: modelEconomic
+      images: [modelEconomic, modelEconomic2, modelEconomic3]
     },
     {
       title: "Модел Стандарт",
@@ -52,19 +62,52 @@ const Models = () => {
               key={index}
               className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-2xl transition-all"
             >
-              <div className="aspect-[4/3] relative overflow-hidden">
-                <img 
-                  src={model.image} 
-                  alt={model.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-5xl font-bold text-white drop-shadow-lg">
-                    {model.area}
+              {model.images ? (
+                <Carousel
+                  className="w-full"
+                  plugins={[
+                    Autoplay({
+                      delay: 3000,
+                    }),
+                  ]}
+                >
+                  <CarouselContent>
+                    {model.images.map((image, imgIndex) => (
+                      <CarouselItem key={imgIndex}>
+                        <div className="aspect-[4/3] relative overflow-hidden">
+                          <img 
+                            src={image} 
+                            alt={`${model.title} - снимка ${imgIndex + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="text-5xl font-bold text-white drop-shadow-lg">
+                              {model.area}
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2" />
+                  <CarouselNext className="right-2" />
+                </Carousel>
+              ) : (
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <img 
+                    src={model.image} 
+                    alt={model.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-5xl font-bold text-white drop-shadow-lg">
+                      {model.area}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
               
               <div className="p-6 space-y-4">
                 <div>
