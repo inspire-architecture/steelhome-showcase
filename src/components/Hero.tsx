@@ -1,12 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, TrendingUp, Award, Clock } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import heroImage from "@/assets/hero-house.jpg";
-import construction9 from "@/assets/construction-9.jpg";
-import construction10 from "@/assets/construction-10.jpg";
-import construction11 from "@/assets/construction-11.png";
-import construction12 from "@/assets/construction-12.jpg";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -21,8 +14,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card/50 -z-10" />
       
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="space-y-8">
+        <div className="flex justify-center">
+          <div className="space-y-8 max-w-4xl">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 Бърза, устойчива и енергийно ефективна къща за{" "}
@@ -70,34 +63,6 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-          </div>
-
-          <div className="relative">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              plugins={[
-                Autoplay({
-                  delay: 4000,
-                }),
-              ]}
-              className="w-full"
-            >
-              <CarouselContent>
-                {[heroImage, construction9, construction10, construction11, construction12].map((image, index) => (
-                  <CarouselItem key={index}>
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
-                      <img src={image} alt={`Префабрикирана къща ${index + 1}`} className="w-full h-full object-cover" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="left-4" />
-              <CarouselNext className="right-4" />
-            </Carousel>
           </div>
         </div>
       </div>
