@@ -1,5 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, TrendingUp, Award, Clock } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import hero1 from "@/assets/hero-1.png";
+import hero2 from "@/assets/hero-2.png";
+import hero3 from "@/assets/hero-3.jpg";
+import hero4 from "@/assets/hero-4.png";
+import hero5 from "@/assets/hero-5.jpg";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -14,8 +21,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card/50 -z-10" />
       
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex justify-center">
-          <div className="space-y-8 max-w-4xl">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 Бърза, устойчива и енергийно ефективна къща за{" "}
@@ -63,6 +70,34 @@ const Hero = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="relative">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 4000,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent>
+                {[hero1, hero2, hero3, hero4, hero5].map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+                      <img src={image} alt={`Префабрикирана къща ${index + 1}`} className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           </div>
         </div>
       </div>
