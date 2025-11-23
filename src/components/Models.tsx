@@ -1,5 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import construction1 from "@/assets/construction-1.jpg";
+import construction2 from "@/assets/construction-2.webp";
+import construction3 from "@/assets/construction-3.jpg";
 
 const Models = () => {
   const models = [
@@ -8,21 +11,21 @@ const Models = () => {
       area: "60-80м²",
       description: "Компактна еднофамилна къща с оптимално разпределение на пространството. Идеална за малки семейства или ваканционни имоти.",
       features: ["2 спални", "1 баня", "Отворена кухня", "Тераса"],
-      image: "placeholder"
+      image: construction1
     },
     {
       title: "Модел Стандарт",
       area: "100-120м²",
       description: "Балансирано решение съчетаващо комфорт и функционалност. Подходяща за семейства търсещи просторен и модерен дом.",
       features: ["3 спални", "2 бани", "Дневна", "Гараж"],
-      image: "placeholder"
+      image: construction2
     },
     {
       title: "Модел Премиум",
       area: "140-180м²",
       description: "Луксозна къща с изискан дизайн и висококачествени материали. Предлага максимален комфорт и простор за цялото семейство.",
       features: ["4 спални", "3 бани", "Кабинет", "Гараж за 2 коли"],
-      image: "placeholder"
+      image: construction3
     },
   ];
 
@@ -49,10 +52,17 @@ const Models = () => {
               key={index}
               className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 hover:shadow-2xl transition-all"
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-muted to-card flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                <div className="text-6xl font-bold text-muted-foreground/20 group-hover:scale-110 transition-transform">
-                  {model.area}
+              <div className="aspect-[4/3] relative overflow-hidden">
+                <img 
+                  src={model.image} 
+                  alt={model.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-5xl font-bold text-white drop-shadow-lg">
+                    {model.area}
+                  </div>
                 </div>
               </div>
               
