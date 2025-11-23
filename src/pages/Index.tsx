@@ -4,7 +4,6 @@ import About from "@/components/About";
 import TechImages from "@/components/TechImages";
 import Technology from "@/components/Technology";
 import Models from "@/components/Models";
-import Projects from "@/components/Projects";
 import Advantages from "@/components/Advantages";
 import Process from "@/components/Process";
 import Plans from "@/components/Plans";
@@ -20,7 +19,6 @@ const Index = () => {
       <TechImages />
       <Technology />
       <Models />
-      <Projects />
       <Advantages />
       <Process />
       <Plans />
