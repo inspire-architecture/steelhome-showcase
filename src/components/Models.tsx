@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import construction1 from "@/assets/construction-1.jpg";
-import construction2 from "@/assets/construction-2.webp";
+import modelStandard from "@/assets/model-standard.jpg";
 import construction3 from "@/assets/construction-3.jpg";
 
 const Models = () => {
@@ -18,7 +18,7 @@ const Models = () => {
       area: "100-120м²",
       description: "Балансирано решение съчетаващо комфорт и функционалност. Подходяща за семейства търсещи просторен и модерен дом.",
       features: ["3 спални", "2 бани", "Дневна", "Гараж"],
-      image: construction2
+      image: modelStandard
     },
     {
       title: "Модел Премиум",
