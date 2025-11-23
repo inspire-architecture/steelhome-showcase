@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import construction1 from "@/assets/construction-1.jpg";
 import modelStandard from "@/assets/model-standard.jpg";
-import construction3 from "@/assets/construction-3.jpg";
+import modelPremium from "@/assets/model-premium.jpg";
 
 const Models = () => {
   const models = [
@@ -25,7 +25,7 @@ const Models = () => {
       area: "140-180м²",
       description: "Луксозна къща с изискан дизайн и висококачествени материали. Предлага максимален комфорт и простор за цялото семейство.",
       features: ["4 спални", "3 бани", "Кабинет", "Гараж за 2 коли"],
-      image: construction3
+      image: modelPremium
     },
   ];
 
