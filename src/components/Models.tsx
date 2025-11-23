@@ -4,6 +4,8 @@ import modelEconomic from "@/assets/model-economic.png";
 import modelEconomic2 from "@/assets/model-economic-2.png";
 import modelEconomic3 from "@/assets/model-economic-3.png";
 import modelStandard from "@/assets/model-standard.jpg";
+import modelStandard2 from "@/assets/model-standard-2.png";
+import modelStandard3 from "@/assets/model-standard-3.png";
 import modelPremium from "@/assets/model-premium.jpg";
 import modelPremium2 from "@/assets/model-premium-2.png";
 import modelPremium3 from "@/assets/model-premium-3.png";
@@ -30,7 +32,7 @@ const Models = () => {
       area: "100-120м²",
       description: "Балансирано решение съчетаващо комфорт и функционалност. Подходяща за семейства търсещи просторен и модерен дом.",
       features: ["3 спални", "2 бани", "Дневна", "Гараж"],
-      image: modelStandard
+      images: [modelStandard, modelStandard2, modelStandard3]
     },
     {
       title: "Модел Премиум",
@@ -95,10 +97,10 @@ const Models = () => {
                   <CarouselPrevious className="left-2" />
                   <CarouselNext className="right-2" />
                 </Carousel>
-              ) : (
+              ) : model.images ? (
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img 
-                    src={model.image} 
+                    src={model.images[0]} 
                     alt={model.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -109,7 +111,7 @@ const Models = () => {
                     </div>
                   </div>
                 </div>
-              )}
+              ) : null}
               
               <div className="p-6 space-y-4">
                 <div>
