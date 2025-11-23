@@ -104,7 +104,47 @@ const Contact = () => {
 
           {/* Contact Info */}
           <div className="space-y-8">
-            
+            <div className="bg-card border border-border rounded-xl p-6 lg:p-8">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                Телефон
+              </h3>
+              <div className="space-y-2">
+                <a href="tel:+359885639136" className="block text-foreground hover:text-primary transition-colors">
+                  +359 885 63 91 36
+                </a>
+                <a href="tel:+359894403069" className="block text-foreground hover:text-primary transition-colors">
+                  +359 894 40 30 69
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-card border border-border rounded-xl p-6 lg:p-8">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <Mail className="w-5 h-5" />
+                Имейл
+              </h3>
+              <a href="mailto:info@prefabrikbg.com" className="text-foreground hover:text-primary transition-colors">
+                info@prefabrikbg.com
+              </a>
+            </div>
+
+            <div className="bg-card border border-border rounded-xl p-6 lg:p-8">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
+                Адрес
+              </h3>
+              <div className="space-y-3 text-sm">
+                <div>
+                  <p className="font-medium">София</p>
+                  <p className="text-muted-foreground">ул. Асен Йорданов 12</p>
+                </div>
+                <div>
+                  <p className="font-medium">Пловдив</p>
+                  <p className="text-muted-foreground">ул. Георги Бенковски 35</p>
+                </div>
+              </div>
+            </div>
 
             <div className="bg-card border border-border rounded-xl p-6 lg:p-8">
               <h3 className="text-lg font-semibold mb-4">Работно време</h3>
