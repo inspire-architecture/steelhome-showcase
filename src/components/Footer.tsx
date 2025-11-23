@@ -41,14 +41,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">+359 885 6391 36    </h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>+359 894 40 30 69     </li>
-              <li>info@prefabrikbg.com</li>
-              <li>гр. София ул. Асен Йорданов 12
-гр. Пловдив, ул. Георги Бенковски 35     
-
-    </li>
+            <h3 className="font-semibold mb-4">Контакти</h3>
+            <ul className="space-y-2 text-sm">
+              <li className="font-semibold text-base text-foreground">+359 885 63 91 36</li>
+              <li className="font-semibold text-base text-foreground">+359 894 40 30 69</li>
+              <li className="text-muted-foreground mt-4">info@prefabrikbg.com</li>
+              <li className="text-muted-foreground">гр. София, ул. Асен Йорданов 12</li>
+              <li className="text-muted-foreground">гр. Пловдив, ул. Георги Бенковски 35</li>
             </ul>
           </div>
         </div>
