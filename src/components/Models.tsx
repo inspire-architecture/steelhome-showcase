@@ -7,6 +7,8 @@ import modelStandard from "@/assets/model-standard.jpg";
 import modelStandard2 from "@/assets/model-standard-2.png";
 import modelStandard3 from "@/assets/model-standard-3.png";
 import modelPremium from "@/assets/model-premium.jpg";
+import modelPremium2 from "@/assets/model-premium-2.jpg";
+import modelPremium5 from "@/assets/model-premium-5.png";
 import {
   Carousel,
   CarouselContent,
@@ -36,7 +38,8 @@ const Models = () => {
       title: "Модел Премиум",
       area: "140-180м²",
       description: "Луксозна къща с изискан дизайн и висококачествени материали. Предлага максимален комфорт и простор за цялото семейство.",
-      features: ["4 спални", "3 бани", "Кабинет", "Гараж за 2 коли"]
+      features: ["4 спални", "3 бани", "Кабинет", "Гараж за 2 коли"],
+      images: [modelPremium2, modelPremium5]
     },
   ];
 
