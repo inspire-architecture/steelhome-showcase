@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import construction1 from "@/assets/construction-1.jpg";
+import modelEconomic from "@/assets/model-economic.png";
 import modelStandard from "@/assets/model-standard.jpg";
 import modelPremium from "@/assets/model-premium.jpg";
 
@@ -11,7 +11,7 @@ const Models = () => {
       area: "60-80м²",
       description: "Компактна еднофамилна къща с оптимално разпределение на пространството. Идеална за малки семейства или ваканционни имоти.",
       features: ["2 спални", "1 баня", "Отворена кухня", "Тераса"],
-      image: construction1
+      image: modelEconomic
     },
     {
       title: "Модел Стандарт",
