@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <img src="/prefabrik-house.svg" alt="Prefabrik House" className="h-10 mb-4" />
+            <img src="/prefabrik-house-logo.png" alt="Prefabrik House" className="h-16 mb-4" />
             <p className="text-sm text-muted-foreground">
               Проектиране и строителство на енергийно ефективни къщи от лека стоманена конструкция.
             </p>
