@@ -3,6 +3,10 @@ import { CheckCircle2, TrendingUp, Award, Clock } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import heroImage from "@/assets/hero-house.jpg";
+import construction9 from "@/assets/construction-9.jpg";
+import construction10 from "@/assets/construction-10.jpg";
+import construction11 from "@/assets/construction-11.png";
+import construction12 from "@/assets/construction-12.jpg";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -82,12 +86,14 @@ const Hero = () => {
               className="w-full"
             >
               <CarouselContent>
-                <CarouselItem>
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
-                    <img src={heroImage} alt="Префабрикирана къща" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
-                  </div>
-                </CarouselItem>
+                {[heroImage, construction9, construction10, construction11, construction12].map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+                      <img src={image} alt={`Префабрикирана къща ${index + 1}`} className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
+                    </div>
+                  </CarouselItem>
+                ))}
               </CarouselContent>
               <CarouselPrevious className="left-4" />
               <CarouselNext className="right-4" />
