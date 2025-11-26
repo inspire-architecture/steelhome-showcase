@@ -17,18 +17,18 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 lg:pt-24 pb-12 lg:pb-20">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-card/50 -z-10" />
+    <section className="relative min-h-screen flex items-center pt-20 lg:pt-24 pb-12 lg:pb-20 bg-[hsl(222,47%,11%)]">
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(222,47%,11%)] via-[hsl(222,47%,13%)] to-[hsl(222,47%,15%)] -z-10" />
       
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
+              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-white">
                 Бърза, устойчива и енергийно ефективна къща за{" "}
                 <span className="text-primary">месеци</span>, не за години.
               </h1>
-              <p className="text-lg lg:text-xl text-muted-foreground">
+              <p className="text-lg lg:text-xl text-white/70">
                 Цялостна услуга - проектиране, изграждане на фундамент, производство и монтаж на къщи и модулни сгради от лека стоманена конструкция (ЛСК).
               </p>
             </div>
@@ -44,7 +44,7 @@ const Hero = () => {
                   <div className="p-2 rounded-lg bg-primary/10 text-primary">
                     <item.icon size={20} />
                   </div>
-                  <span className="text-foreground pt-2">{item.text}</span>
+                  <span className="text-white pt-2">{item.text}</span>
                 </div>
               ))}
             </div>
@@ -58,7 +58,7 @@ const Hero = () => {
               </Button>
             </div>
 
-            <div className="grid grid-cols-3 gap-4 lg:gap-8 pt-8 border-t border-border">
+            <div className="grid grid-cols-3 gap-4 lg:gap-8 pt-8 border-t border-white/20">
               {[
                 { value: "10+", label: "г. опит" },
                 { value: "60+", label: "къщи" },
@@ -66,7 +66,7 @@ const Hero = () => {
               ].map((stat, index) => (
                 <div key={index} className="space-y-1">
                   <div className="text-2xl lg:text-3xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-sm text-white/60">{stat.label}</div>
                 </div>
               ))}
             </div>
