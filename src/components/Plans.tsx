@@ -45,6 +45,7 @@ const Plans = () => {
   };
   return <section id="plans" className="py-20 lg:py-32 bg-card/30">
       <div className="container mx-auto px-4 lg:px-8">
+        <div className="border-4 border-[hsl(222,47%,11%)] rounded-2xl p-8 lg:p-12">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Избери план</h2>
           <p className="text-lg text-muted-foreground">
@@ -208,6 +209,7 @@ const Plans = () => {
               )}
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>;
