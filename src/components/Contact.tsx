@@ -71,47 +71,47 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-card border border-border rounded-xl p-6 lg:p-8">
-            <h3 className="text-xl font-semibold mb-6">Изпратете запитване</h3>
+          <div className="bg-[hsl(222,47%,11%)] border border-white/10 rounded-xl p-6 lg:p-8">
+            <h3 className="text-xl font-semibold mb-6 text-white">Изпратете запитване</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label htmlFor="name" className="block text-sm font-medium mb-2 text-white">
                   Име *
                 </label>
                 <Input id="name" value={formData.name} onChange={e => setFormData({
                 ...formData,
                 name: e.target.value
-              })} required placeholder="Вашето име" disabled={isSubmitting} />
+              })} required placeholder="Вашето име" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                <label htmlFor="phone" className="block text-sm font-medium mb-2 text-white">
                   Телефон *
                 </label>
                 <Input id="phone" type="tel" value={formData.phone} onChange={e => setFormData({
                 ...formData,
                 phone: e.target.value
-              })} required placeholder="+359 ..." disabled={isSubmitting} />
+              })} required placeholder="+359 ..." disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label htmlFor="email" className="block text-sm font-medium mb-2 text-white">
                   Имейл *
                 </label>
                 <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
                 ...formData,
                 email: e.target.value
-              })} required placeholder="example@email.com" disabled={isSubmitting} />
+              })} required placeholder="example@email.com" disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label htmlFor="message" className="block text-sm font-medium mb-2 text-white">
                   Съобщение
                 </label>
                 <Textarea id="message" value={formData.message} onChange={e => setFormData({
                 ...formData,
                 message: e.target.value
-              })} placeholder="Опишете вашия проект..." rows={5} disabled={isSubmitting} />
+              })} placeholder="Опишете вашия проект..." rows={5} disabled={isSubmitting} className="bg-white/10 border-white/20 text-white placeholder:text-white/50" />
               </div>
 
               <div className="flex items-start gap-2">
@@ -119,7 +119,7 @@ const Contact = () => {
                 ...formData,
                 gdpr: checked as boolean
               })} disabled={isSubmitting} />
-                <label htmlFor="gdpr" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
+                <label htmlFor="gdpr" className="text-sm text-white/70 leading-relaxed cursor-pointer">
                   Съгласен съм моите лични данни да бъдат обработени съгласно GDPR *
                 </label>
               </div>
