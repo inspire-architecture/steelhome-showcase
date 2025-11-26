@@ -4,7 +4,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,25 +15,51 @@ const Contact = () => {
     message: "",
     gdpr: false
   });
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.gdpr) {
       toast.error("Моля, приемете условията за обработка на лични данни");
       return;
     }
 
-    // Here you would typically send the form data to your backend
-    toast.success("Вашето запитване е изпратено успешно! Ще се свържем с вас скоро.");
+    setIsSubmitting(true);
 
-    // Reset form
-    setFormData({
-      name: "",
-      phone: "",
-      email: "",
-      message: "",
-      gdpr: false
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message
+        }
+      });
+
+      if (error) {
+        console.error("Error sending email:", error);
+        toast.error("Възникна грешка при изпращането. Моля, опитайте отново.");
+        return;
+      }
+
+      toast.success("Вашето запитване е изпратено успешно! Ще се свържем с вас скоро.");
+
+      // Reset form
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+        gdpr: false
+      });
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("Възникна грешка при изпращането. Моля, опитайте отново.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
   return <section id="contact" className="py-20 lg:py-32">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -53,7 +81,7 @@ const Contact = () => {
                 <Input id="name" value={formData.name} onChange={e => setFormData({
                 ...formData,
                 name: e.target.value
-              })} required placeholder="Вашето име" />
+              })} required placeholder="Вашето име" disabled={isSubmitting} />
               </div>
 
               <div>
@@ -63,7 +91,7 @@ const Contact = () => {
                 <Input id="phone" type="tel" value={formData.phone} onChange={e => setFormData({
                 ...formData,
                 phone: e.target.value
-              })} required placeholder="+359 ..." />
+              })} required placeholder="+359 ..." disabled={isSubmitting} />
               </div>
 
               <div>
@@ -73,7 +101,7 @@ const Contact = () => {
                 <Input id="email" type="email" value={formData.email} onChange={e => setFormData({
                 ...formData,
                 email: e.target.value
-              })} required placeholder="example@email.com" />
+              })} required placeholder="example@email.com" disabled={isSubmitting} />
               </div>
 
               <div>
@@ -83,21 +111,28 @@ const Contact = () => {
                 <Textarea id="message" value={formData.message} onChange={e => setFormData({
                 ...formData,
                 message: e.target.value
-              })} placeholder="Опишете вашия проект..." rows={5} />
+              })} placeholder="Опишете вашия проект..." rows={5} disabled={isSubmitting} />
               </div>
 
               <div className="flex items-start gap-2">
                 <Checkbox id="gdpr" checked={formData.gdpr} onCheckedChange={checked => setFormData({
                 ...formData,
                 gdpr: checked as boolean
-              })} />
+              })} disabled={isSubmitting} />
                 <label htmlFor="gdpr" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
                   Съгласен съм моите лични данни да бъдат обработени съгласно GDPR *
                 </label>
               </div>
 
-              <Button type="submit" variant="cta" size="lg" className="w-full">
-                Изпрати запитване
+              <Button type="submit" variant="cta" size="lg" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Изпращане...
+                  </>
+                ) : (
+                  "Изпрати запитване"
+                )}
               </Button>
             </form>
           </div>
