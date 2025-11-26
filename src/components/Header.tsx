@@ -18,8 +18,6 @@ const Header = () => {
     { label: "За нас", href: "#about" },
     { label: "Технология", href: "#technology" },
     { label: "Модели къщи", href: "#models" },
-    { label: "Реализирани обекти", href: "#projects" },
-    { label: "Блог", href: "#blog" },
     { label: "Предимства", href: "#advantages" },
     { label: "Процес", href: "#process" },
     { label: "Контакти", href: "#contact" },
