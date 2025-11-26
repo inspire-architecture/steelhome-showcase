@@ -131,7 +131,7 @@ const Models = () => {
                   </div>
                 </div>
 
-                <Button variant="outline" className="w-full group-hover:border-primary" onClick={scrollToPlans}>
+                <Button variant="outline" className="w-full border-[hsl(222,47%,11%)] text-[hsl(222,47%,11%)] hover:bg-[hsl(222,47%,11%)] hover:text-white" onClick={scrollToPlans}>
                   Виж повече
                   <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
