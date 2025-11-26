@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -52,8 +54,16 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
+        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Prefabrik House. Всички права запазени.</p>
+          <div className="flex gap-6">
+            <Link to="/privacy-policy" className="hover:text-primary transition-colors">
+              Лични данни
+            </Link>
+            <Link to="/cookies-policy" className="hover:text-primary transition-colors">
+              Политика за бисквитки
+            </Link>
+          </div>
         </div>
       </div>
     </footer>;
