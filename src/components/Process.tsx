@@ -1,5 +1,3 @@
-import { ArrowRight, ArrowDown } from "lucide-react";
-
 const Process = () => {
   const steps = [
     {
@@ -64,44 +62,6 @@ const Process = () => {
                   {step.description}
                 </p>
               </div>
-              
-              {/* Arrow between steps - horizontal for desktop */}
-              {index < steps.length - 1 && (
-                <>
-                  {/* Desktop: horizontal arrows (not on last column) */}
-                  {(index % 3 !== 2) && (
-                    <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                      <ArrowRight size={32} className="text-primary animate-pulse" />
-                    </div>
-                  )}
-                  
-                  {/* Desktop: down arrows at end of row */}
-                  {(index === 2) && (
-                    <div className="hidden lg:flex absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-                      <ArrowDown size={32} className="text-primary animate-pulse" />
-                    </div>
-                  )}
-                  
-                  {/* Tablet: horizontal arrows (not on last column of 2-col grid) */}
-                  {(index % 2 !== 1) && (
-                    <div className="hidden md:flex lg:hidden absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                      <ArrowRight size={32} className="text-primary animate-pulse" />
-                    </div>
-                  )}
-                  
-                  {/* Tablet: down arrows at end of row */}
-                  {(index === 1 || index === 3) && (
-                    <div className="hidden md:flex lg:hidden absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-                      <ArrowDown size={32} className="text-primary animate-pulse" />
-                    </div>
-                  )}
-                  
-                  {/* Mobile: down arrows */}
-                  <div className="flex md:hidden absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-                    <ArrowDown size={32} className="text-primary animate-pulse" />
-                  </div>
-                </>
-              )}
             </div>
           ))}
         </div>
