@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
                 Бърза, устойчива и енергийно ефективна къща за{" "}
                 <span className="text-primary">месеци</span>, не за години.
               </h1>
