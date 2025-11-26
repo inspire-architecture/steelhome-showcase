@@ -90,7 +90,6 @@ const Hero = () => {
                   <CarouselItem key={index}>
                     <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
                       <img src={image} alt={`Префабрикирана къща ${index + 1}`} className="w-full h-full object-cover" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
                     </div>
                   </CarouselItem>
                 ))}
