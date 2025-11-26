@@ -192,12 +192,12 @@ const Plans = () => {
               </div>
 
               {index === 0 ? (
-                <Button variant="default" size="sm" className="w-full gap-2" onClick={() => window.open('/specifications-vip-premium.html', '_blank')}>
+                <Button variant="default" size="sm" className="w-full gap-2" onClick={() => window.open('/specifications-premium.html', '_blank')}>
                   <Download size={16} />
                   Изтегли спецификации
                 </Button>
               ) : index === 1 ? (
-                <Button variant="default" size="sm" className="w-full gap-2" onClick={() => window.open('/specifications-premium.html', '_blank')}>
+                <Button variant="default" size="sm" className="w-full gap-2" onClick={() => window.open('/specifications-vip.html', '_blank')}>
                   <Download size={16} />
                   Изтегли спецификации
                 </Button>
