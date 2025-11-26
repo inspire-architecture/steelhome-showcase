@@ -45,11 +45,11 @@ const Advantages = () => {
   ];
 
   return (
-    <section id="advantages" className="py-20 lg:py-32 bg-card/30">
+    <section id="advantages" className="py-20 lg:py-32 bg-[hsl(222,47%,11%)]">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">Предимства</h2>
-          <p className="text-lg text-muted-foreground">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">Предимства</h2>
+          <p className="text-lg text-white/70">
             Защо да изберете къща от лека стоманена конструкция
           </p>
         </div>
@@ -58,15 +58,15 @@ const Advantages = () => {
           {advantages.map((advantage, index) => (
             <div
               key={index}
-              className="group p-6 bg-card border border-border rounded-xl hover:border-primary/50 hover:shadow-xl transition-all"
+              className="group p-6 bg-white/10 border border-white/20 rounded-xl hover:border-primary/50 hover:shadow-xl transition-all"
             >
               <div className="mb-4">
-                <div className="inline-flex p-3 rounded-lg bg-primary/10 text-primary group-hover:scale-110 transition-transform">
+                <div className="inline-flex p-3 rounded-lg bg-primary/20 text-primary group-hover:scale-110 transition-transform">
                   <advantage.icon size={28} />
                 </div>
               </div>
-              <h3 className="font-semibold text-lg mb-2">{advantage.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <h3 className="font-semibold text-lg mb-2 text-white">{advantage.title}</h3>
+              <p className="text-sm text-white/70 leading-relaxed">
                 {advantage.description}
               </p>
             </div>
