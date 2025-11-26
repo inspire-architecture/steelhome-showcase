@@ -161,19 +161,19 @@ const Contact = () => {
               </a>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 lg:p-8">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+            <div className="bg-[hsl(222,47%,11%)] border border-white/10 rounded-xl p-6 lg:p-8">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 text-white">
                 <MapPin className="w-5 h-5" />
                 Адрес
               </h3>
               <div className="space-y-3 text-sm">
                 <div>
-                  <p className="font-medium">София</p>
-                  <p className="text-muted-foreground">ул. Асен Йорданов 12</p>
+                  <p className="font-medium text-white">София</p>
+                  <p className="text-white/70">ул. Асен Йорданов 12</p>
                 </div>
                 <div>
-                  <p className="font-medium">Пловдив</p>
-                  <p className="text-muted-foreground">ул. Георги Бенковски 35</p>
+                  <p className="font-medium text-white">Пловдив</p>
+                  <p className="text-white/70">ул. Георги Бенковски 35</p>
                 </div>
               </div>
             </div>
