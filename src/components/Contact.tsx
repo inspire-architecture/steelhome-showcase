@@ -178,20 +178,20 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-card border border-border rounded-xl p-6 lg:p-8">
-              <h3 className="text-lg font-semibold mb-4">Работно време</h3>
+            <div className="bg-[hsl(222,47%,11%)] border border-white/10 rounded-xl p-6 lg:p-8">
+              <h3 className="text-lg font-semibold mb-4 text-white">Работно време</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Понеделник - Петък</span>
-                  <span className="font-medium">9:00 - 18:00</span>
+                  <span className="text-white/70">Понеделник - Петък</span>
+                  <span className="font-medium text-white">9:00 - 18:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Събота</span>
-                  <span className="font-medium">10:00 - 14:00</span>
+                  <span className="text-white/70">Събота</span>
+                  <span className="font-medium text-white">10:00 - 14:00</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">Неделя</span>
-                  <span className="font-medium">Почивен ден</span>
+                  <span className="text-white/70">Неделя</span>
+                  <span className="font-medium text-white">Почивен ден</span>
                 </div>
               </div>
             </div>
