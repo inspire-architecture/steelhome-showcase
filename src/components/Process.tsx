@@ -71,44 +71,34 @@ const Process = () => {
                   {/* Desktop: horizontal arrows (not on last column) */}
                   {(index % 3 !== 2) && (
                     <div className="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                      <div className="bg-primary rounded-full p-2 shadow-lg animate-pulse">
-                        <ArrowRight size={20} className="text-white" />
-                      </div>
+                      <ArrowRight size={32} className="text-primary animate-pulse" />
                     </div>
                   )}
                   
                   {/* Desktop: down arrows at end of row */}
                   {(index === 2) && (
                     <div className="hidden lg:flex absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-                      <div className="bg-primary rounded-full p-2 shadow-lg animate-pulse">
-                        <ArrowDown size={20} className="text-white" />
-                      </div>
+                      <ArrowDown size={32} className="text-primary animate-pulse" />
                     </div>
                   )}
                   
                   {/* Tablet: horizontal arrows (not on last column of 2-col grid) */}
                   {(index % 2 !== 1) && (
                     <div className="hidden md:flex lg:hidden absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
-                      <div className="bg-primary rounded-full p-2 shadow-lg animate-pulse">
-                        <ArrowRight size={20} className="text-white" />
-                      </div>
+                      <ArrowRight size={32} className="text-primary animate-pulse" />
                     </div>
                   )}
                   
                   {/* Tablet: down arrows at end of row */}
                   {(index === 1 || index === 3) && (
                     <div className="hidden md:flex lg:hidden absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-                      <div className="bg-primary rounded-full p-2 shadow-lg animate-pulse">
-                        <ArrowDown size={20} className="text-white" />
-                      </div>
+                      <ArrowDown size={32} className="text-primary animate-pulse" />
                     </div>
                   )}
                   
                   {/* Mobile: down arrows */}
                   <div className="flex md:hidden absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="bg-primary rounded-full p-2 shadow-lg animate-pulse">
-                      <ArrowDown size={20} className="text-white" />
-                    </div>
+                    <ArrowDown size={32} className="text-primary animate-pulse" />
                   </div>
                 </>
               )}
