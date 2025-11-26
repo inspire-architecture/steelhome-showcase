@@ -34,8 +34,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[hsl(222,47%,11%)] ${
+        isScrolled ? "backdrop-blur-md border-b border-border/20 shadow-lg" : ""
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
@@ -50,7 +50,7 @@ const Header = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="px-3 py-2 text-sm text-white/70 hover:text-white transition-colors"
               >
                 {item.label}
               </button>
@@ -66,7 +66,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-white"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -75,13 +75,13 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-background/98 backdrop-blur-md border-t border-border">
+        <div className="lg:hidden bg-[hsl(222,47%,11%)] backdrop-blur-md border-t border-white/10">
           <nav className="container mx-auto px-4 py-4 flex flex-col gap-2">
             {menuItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="px-4 py-3 text-left text-muted-foreground hover:text-foreground hover:bg-card rounded-lg transition-colors"
+                className="px-4 py-3 text-left text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
               >
                 {item.label}
               </button>
