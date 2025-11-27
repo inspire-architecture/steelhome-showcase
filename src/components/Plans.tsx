@@ -33,7 +33,7 @@ const Plans = () => {
       "Пълно обзавеждане с мебели по поръчка"
     ],
     highlight: false,
-    badge: "Най-изгоден"
+    badge: "Най-ефективен"
   }];
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
