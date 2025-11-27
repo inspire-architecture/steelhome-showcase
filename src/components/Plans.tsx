@@ -62,15 +62,6 @@ const Plans = () => {
               <p className="text-xs text-muted-foreground">Бюджетен вариант</p>
               <p className="text-sm font-semibold text-accent mt-1">цена от 750€/м²</p>
             </div>
-            <div className="flex items-start gap-3 mb-4">
-              
-              <div>
-                <h4 className="text-base font-bold mb-1">Технически спецификации</h4>
-                <p className="text-xs text-muted-foreground">
-              </p>
-              </div>
-            </div>
-
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2">
                 <Check size={14} className="text-primary flex-shrink-0" />
