@@ -116,6 +116,7 @@ const Plans = () => {
             <div className="text-center mb-4">
               <h3 className="text-xl font-bold mb-1">Стандарт</h3>
               <p className="text-xs text-muted-foreground">Основен вариант</p>
+              <p className="text-sm font-semibold text-accent mt-1">цена от 1050€/м²</p>
             </div>
             <div className="flex items-start gap-3 mb-4">
               
