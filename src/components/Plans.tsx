@@ -184,6 +184,7 @@ const Plans = () => {
                 <h3 className="text-xl font-bold mb-1">{plan.name}</h3>
                 <p className="text-xs text-muted-foreground">{plan.subtitle}</p>
                 {index === 0 && <p className="text-sm font-semibold text-accent mt-1">цена от 1300€/м²</p>}
+                {index === 1 && <p className="text-sm font-semibold text-accent mt-1">цена от 1800€/м²</p>}
               </div>
 
               <div className="space-y-2 mb-4">
