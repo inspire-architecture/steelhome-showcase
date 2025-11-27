@@ -109,7 +109,7 @@ const Plans = () => {
           </div>
 
           {/* Plan Standard */}
-          <div className="bg-card border-2 border-primary rounded-xl p-4 shadow-xl relative hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-fade-in" style={{ animationDelay: '150ms' }}>
+          <div className="bg-card border-2 border-accent rounded-xl p-4 shadow-xl relative hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 animate-fade-in" style={{ animationDelay: '150ms' }}>
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-primary-foreground text-xs font-semibold rounded-full">
               Препоръчан
             </div>
@@ -171,7 +171,7 @@ const Plans = () => {
           {plans.map((plan, index) => (
             <div 
               key={index} 
-              className={`relative p-4 rounded-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in ${plan.highlight ? "bg-primary/10 border-2 border-primary shadow-2xl" : "bg-card border border-border hover:border-primary/50 hover:shadow-xl"}`}
+              className={`relative p-4 rounded-xl transition-all duration-300 hover:-translate-y-2 animate-fade-in ${plan.highlight ? "bg-primary/10 border-2 border-accent shadow-2xl" : "bg-card border-2 border-accent hover:shadow-xl"}`}
               style={{ animationDelay: `${(index + 2) * 150}ms` }}
             >
               {plan.badge && (
