@@ -60,7 +60,7 @@ const Plans = () => {
             <div className="text-center mb-4">
               <h3 className="text-xl font-bold mb-1">Икономик</h3>
               <p className="text-xs text-muted-foreground">Бюджетен вариант</p>
-              <p className="text-sm font-semibold text-primary mt-1">цена от 750€/м²</p>
+              <p className="text-sm font-semibold text-accent mt-1">цена от 750€/м²</p>
             </div>
             <div className="flex items-start gap-3 mb-4">
               
